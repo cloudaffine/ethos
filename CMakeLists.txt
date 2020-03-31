@@ -1,0 +1,63 @@
+cmake_minimum_required (VERSION 3.13)
+set(CMAKE_C_COMPILER_WORKS "STATIC_LIBRARY")
+project(ethos C ASM)
+
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR riscv)
+set(CMAKE_CROSSCOMPILING 1)
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
+file(GLOB_RECURSE KERNEL_SRCS "kernel/*.c" "kernel/*.asm")
+
+# tool chain definition
+set(ASM_FLAGS "-march=rv32imac -mabi=ilp32")
+set(C_FLAGS "-march=rv32imac -mabi=ilp32 -std=gnu99 -ffreestanding -nostdlib -nostdinc -nostartfiles -fno-aggressive-loop-optimizations -fno-zero-initialized-in-bss -O0 -Wall -Wextra")
+set(CMAKE_C_FLAGS_DEBUG "-ggdb")
+set(LINKER_FLAGS "")
+
+##################### CROSS COMPILING TOOL CHAIN ############################
+set(_CMAKE_TOOLCHAIN_PREFIX "riscv64-unknown-elf")
+
+# BINUTILS
+set(CMAKE_AR "riscv64-unknown-elf-ar")
+set(CMAKE_RANLIB  "riscv64-unknown-elf-ranlib")
+
+# ASM
+#enable_language(ASM)
+set(CMAKE_ASM_COMPILER "riscv64-unknown-elf-as")
+set(CMAKE_ASM_OBJECT_FORMAT "elf")
+set(CMAKE_ASM_COMPILE_OBJECT "${CMAKE_ASM_COMPILER} ${CMAKE_ASM_FLAGS} ${ASM_FLAGS} -o <OBJECT> <SOURCE>")
+
+# C COMPILER
+enable_language(C)
+set(CMAKE_C_COMPILER "riscv64-unknown-elf-gcc")
+set(CMAKE_C_SYSROOT_FLAG "")
+set(CMAKE_C_FLAGS "${C_FLAGS}")
+set(CMAKE_C_LINK_FLAGS "")
+set(CMAKE_CXX_COMPILER "riscv64-unknown-elf-g++")
+
+# LINKER
+set(CMAKE_LINKER riscv64-unknown-elf-ld)
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,-T${CMAKE_SOURCE_DIR}/layout.ld")
+
+# kernel
+add_executable(${CMAKE_PROJECT_NAME} ${KERNEL_SRCS})
+target_link_libraries(${CMAKE_PROJECT_NAME} c)
+
+
+add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
+        POST_BUILD
+        COMMAND riscv64-unknown-elf-objdump -d -D ethos > ethos.elfdump && hexdump ethos > ethos.hexdump
+        COMMENT "COPY kernel to another file")
+
+
+# run kernel in QEMU
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+    set(QEMU_FLAGS "-s;-S")
+endif()
+add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
+        POST_BUILD
+        COMMAND qemu-system-riscv32 -monitor stdio -m 512M -no-reboot -no-shutdown ${QEMU_FLAGS} -kernel ${CMAKE_BINARY_DIR}/ethos
+        COMMENT "Running ethos kernel...")
+
+
