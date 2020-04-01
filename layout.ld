@@ -1,44 +1,28 @@
-ENTRY(start)
+OUTPUT_ARCH( "riscv" )
+ENTRY( entry )
+SECTIONS
+{
+  /* text: test code section */
+  . = 0x80000000;
+  .text : { *(.text) }
+  /* data: Initialized data segment */
+  .data : {
+   . = ALIGN(4096);
+   *(.data)
+  }
+  .rodata : {
+   *(.rodata)
+  }
+  .bss : {
+    *(.bss)
+  }
+  .sdata : {
+    *(.sdata) }
+    .debug : { *(.debug)
+  }
+  . += 0x8000;
+  stack_top = .;
 
-SECTIONS {
-    virtual_start = 0xC0000000;
-    physical_start = 0x0;
-    kernel_offset = 0x100000;
-    kernel_virtual_start = virtual_start + kernel_offset;
-    kernel_physical_start = kernel_offset;
-
-    . = kernel_offset;
-
-    .boot 0x100000 : AT(0x100000) ALIGN(4K)
-    {
-        *(.multiboot)
-        *(.boot)
-        *(.boot_data)
-        *(.boot_bss)
-    }
-
-    .text ALIGN(4K) : AT(ADDR(.text) - virtual_start)
-    {
-        *(.text)
-    }
-
-    /* Read-only data. */
-    .rodata ALIGN(4K) : AT(ADDR(.rodata) - virtual_start)
-    {
-        *(.rodata)
-    }
-
-    /* Read-write data (initialized) */
-    .data ALIGN(4K) : AT(ADDR(.data) - virtual_start)
-    {
-        *(.data)
-    }
-
-    /* Read-write data (uninitialized) and stack */
-    .bss ALIGN(4K) : AT(ADDR(.bss) - virtual_start)
-    {
-        *(COMMON)
-        *(.bss)
-    }
-
+  /* End of uninitalised data segement */
+  _end = .;
 }

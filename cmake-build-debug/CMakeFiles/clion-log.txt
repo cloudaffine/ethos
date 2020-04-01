@@ -1,0 +1,19 @@
+"/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc -DCMAKE_CXX_COMPILER=/usr/local/opt/riscv/bin/riscv32-unknown-elf-g++ -G "CodeBlocks - Unix Makefiles" /Users/chao.yang/Work/ethos
+-- The C compiler identification is GNU 9.2.0
+-- Checking whether C compiler has -isysroot
+-- Checking whether C compiler has -isysroot - yes
+-- Checking whether C compiler supports OSX deployment target flag
+-- Checking whether C compiler supports OSX deployment target flag - no
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+CMake Error at CMakeLists.txt:45 (add_library):
+  No SOURCES given to target: kc
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+
+Cannot get compiler information:
+	Cannot run program "riscv32-unknown-elf-gcc" (in directory "/Users/chao.yang/Work/ethos/cmake-build-debug"): error=2, No such file or directory

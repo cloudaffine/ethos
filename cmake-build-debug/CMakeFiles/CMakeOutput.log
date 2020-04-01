@@ -1,0 +1,900 @@
+The system is: Darwin - 19.4.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+riscv32-unknown-elf-gcc (GCC) 9.2.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1f80b/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_1f80b.dir/build.make CMakeFiles/cmTC_1f80b.dir/build
+Building C object CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//cc48gCLO.s
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include
+End of search list.
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//cc48gCLO.s
+GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+Linking C executable cmTC_1f80b
+"/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_1f80b.dir/link.txt --verbose=1
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o  -o cmTC_1f80b 
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_1f80b' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccIMHZEs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_1f80b /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+collect2 version 9.2.0
+/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccIMHZEs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_1f80b /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+GNU ld (GNU Binutils) 2.34/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000010074
+
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_1f80b' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  end of search list found
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/include]
+  implicit include dirs: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed;/usr/local/opt/riscv/riscv32-unknown-elf/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_1f80b/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_1f80b.dir/build.make CMakeFiles/cmTC_1f80b.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//cc48gCLO.s]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//cc48gCLO.s]
+  ignore line: [GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [Linking C executable cmTC_1f80b]
+  ignore line: ["/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_1f80b.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o  -o cmTC_1f80b ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_1f80b' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  link line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccIMHZEs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_1f80b /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o]
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccIMHZEs.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgloss] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/usr/local/opt/riscv/riscv32-unknown-elf] ==> ignore
+    arg [-melf32lriscv] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_1f80b] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o] ==> ignore
+    arg [-L/usr/local/opt/libressl/lib] ==> dir [/usr/local/opt/libressl/lib]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib]
+    arg [-L/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_1f80b.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--start-group] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgloss] ==> lib [gloss]
+    arg [--end-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o] ==> ignore
+  collapse library dir [/usr/local/opt/libressl/lib] ==> [/usr/local/opt/libressl/lib]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  collapse library dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit libs: [gcc;c;gloss;gcc]
+  implicit dirs: [/usr/local/opt/libressl/lib;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0;/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit fwks: []
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_557c6/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_557c6.dir/build.make CMakeFiles/cmTC_557c6.dir/build
+Building C object CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccEgWJIx.s
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include
+End of search list.
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccEgWJIx.s
+GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+Linking C executable cmTC_557c6
+"/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_557c6.dir/link.txt --verbose=1
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o  -o cmTC_557c6 
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_557c6' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccS25YHf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_557c6 /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+collect2 version 9.2.0
+/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccS25YHf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_557c6 /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+GNU ld (GNU Binutils) 2.34/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000010074
+
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_557c6' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  end of search list found
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/include]
+  implicit include dirs: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed;/usr/local/opt/riscv/riscv32-unknown-elf/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_557c6/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_557c6.dir/build.make CMakeFiles/cmTC_557c6.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccEgWJIx.s]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccEgWJIx.s]
+  ignore line: [GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [Linking C executable cmTC_557c6]
+  ignore line: ["/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_557c6.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o  -o cmTC_557c6 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_557c6' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  link line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccS25YHf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_557c6 /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o]
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccS25YHf.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgloss] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/usr/local/opt/riscv/riscv32-unknown-elf] ==> ignore
+    arg [-melf32lriscv] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_557c6] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o] ==> ignore
+    arg [-L/usr/local/opt/libressl/lib] ==> dir [/usr/local/opt/libressl/lib]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib]
+    arg [-L/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_557c6.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--start-group] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgloss] ==> lib [gloss]
+    arg [--end-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o] ==> ignore
+  collapse library dir [/usr/local/opt/libressl/lib] ==> [/usr/local/opt/libressl/lib]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  collapse library dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit libs: [gcc;c;gloss;gcc]
+  implicit dirs: [/usr/local/opt/libressl/lib;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0;/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit fwks: []
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3278a/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_3278a.dir/build.make CMakeFiles/cmTC_3278a.dir/build
+Building C object CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccFamu1d.s
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include
+End of search list.
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccFamu1d.s
+GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+Linking C executable cmTC_3278a
+"/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_3278a.dir/link.txt --verbose=1
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o  -o cmTC_3278a 
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_3278a' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccwlzk0G.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_3278a /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+collect2 version 9.2.0
+/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccwlzk0G.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_3278a /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+GNU ld (GNU Binutils) 2.34/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000010074
+
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_3278a' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  end of search list found
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/include]
+  implicit include dirs: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed;/usr/local/opt/riscv/riscv32-unknown-elf/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_3278a/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_3278a.dir/build.make CMakeFiles/cmTC_3278a.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccFamu1d.s]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccFamu1d.s]
+  ignore line: [GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [Linking C executable cmTC_3278a]
+  ignore line: ["/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_3278a.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o  -o cmTC_3278a ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_3278a' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  link line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccwlzk0G.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_3278a /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o]
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccwlzk0G.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgloss] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/usr/local/opt/riscv/riscv32-unknown-elf] ==> ignore
+    arg [-melf32lriscv] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_3278a] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o] ==> ignore
+    arg [-L/usr/local/opt/libressl/lib] ==> dir [/usr/local/opt/libressl/lib]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib]
+    arg [-L/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_3278a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--start-group] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgloss] ==> lib [gloss]
+    arg [--end-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o] ==> ignore
+  collapse library dir [/usr/local/opt/libressl/lib] ==> [/usr/local/opt/libressl/lib]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  collapse library dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit libs: [gcc;c;gloss;gcc]
+  implicit dirs: [/usr/local/opt/libressl/lib;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0;/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit fwks: []
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4fafc/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4fafc.dir/build.make CMakeFiles/cmTC_4fafc.dir/build
+Building C object CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccfoB55C.s
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include
+End of search list.
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccfoB55C.s
+GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+Linking C executable cmTC_4fafc
+"/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_4fafc.dir/link.txt --verbose=1
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o  -o cmTC_4fafc 
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_4fafc' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccr6Rny6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_4fafc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+collect2 version 9.2.0
+/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccr6Rny6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_4fafc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+GNU ld (GNU Binutils) 2.34/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000010074
+
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_4fafc' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  end of search list found
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/include]
+  implicit include dirs: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed;/usr/local/opt/riscv/riscv32-unknown-elf/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_4fafc/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4fafc.dir/build.make CMakeFiles/cmTC_4fafc.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccfoB55C.s]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccfoB55C.s]
+  ignore line: [GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [Linking C executable cmTC_4fafc]
+  ignore line: ["/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_4fafc.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o  -o cmTC_4fafc ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_4fafc' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  link line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccr6Rny6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_4fafc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o]
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccr6Rny6.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgloss] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/usr/local/opt/riscv/riscv32-unknown-elf] ==> ignore
+    arg [-melf32lriscv] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_4fafc] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o] ==> ignore
+    arg [-L/usr/local/opt/libressl/lib] ==> dir [/usr/local/opt/libressl/lib]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib]
+    arg [-L/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_4fafc.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--start-group] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgloss] ==> lib [gloss]
+    arg [--end-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o] ==> ignore
+  collapse library dir [/usr/local/opt/libressl/lib] ==> [/usr/local/opt/libressl/lib]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  collapse library dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit libs: [gcc;c;gloss;gcc]
+  implicit dirs: [/usr/local/opt/libressl/lib;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0;/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit fwks: []
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4580a/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4580a.dir/build.make CMakeFiles/cmTC_4580a.dir/build
+Building C object CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccbT6CRL.s
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include
+End of search list.
+GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)
+	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccbT6CRL.s
+GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+Linking C executable cmTC_4580a
+"/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_4580a.dir/link.txt --verbose=1
+/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o  -o cmTC_4580a 
+Using built-in specs.
+COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper
+Target: riscv32-unknown-elf
+Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+Thread model: single
+gcc version 9.2.0 (GCC) 
+COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/
+LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_4580a' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//cc5trAd4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_4580a /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+collect2 version 9.2.0
+/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//cc5trAd4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_4580a /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o
+GNU ld (GNU Binutils) 2.34/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000010074
+
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_4580a' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+    add: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  end of search list found
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  collapse include dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/include]
+  implicit include dirs: [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed;/usr/local/opt/riscv/riscv32-unknown-elf/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/chao.yang/Work/ethos/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_4580a/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4580a.dir/build.make CMakeFiles/cmTC_4580a.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -v -Wl,-v -o CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o   -c "/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/cc1 -quiet -v -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk /Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=rocket -march=rv32gc -mabi=ilp32d -auxbase-strip CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o -version -o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccbT6CRL.s]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed]
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 9.2.0 (riscv32-unknown-elf)]
+  ignore line: [	compiled by GNU C version 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.32.29), GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: ac6ab999d549633aca29591a67dd1b42]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [ /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32gc -mabi=ilp32d -o CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o /var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//ccbT6CRL.s]
+  ignore line: [GNU assembler version 2.34 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.34]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-v' '-o' 'CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  ignore line: [Linking C executable cmTC_4580a]
+  ignore line: ["/Users/chao.yang/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_4580a.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/libressl/lib -v -Wl,-v CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o  -o cmTC_4580a ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/opt/riscv/bin/riscv32-unknown-elf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper]
+  ignore line: [Target: riscv32-unknown-elf]
+  ignore line: [Configured with: /Users/chao.yang/Work/riscv-gnu-toolchain/riscv-gcc/configure --target=riscv32-unknown-elf --prefix=/usr/local/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-system-zlib --enable-tls --with-newlib --with-sysroot=/usr/local/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=.././riscv-gcc --disable-multilib --with-abi=ilp32d --with-arch=rv32gc --with-tune=rocket 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+  ignore line: [Thread model: single]
+  ignore line: [gcc version 9.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/bin/]
+  ignore line: [LIBRARY_PATH=/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/:/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/:/usr/local/opt/riscv/riscv32-unknown-elf/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk' '-L/usr/local/opt/libressl/lib' '-v' '-o' 'cmTC_4580a' '-mtune=rocket' '-march=rv32gc' '-mabi=ilp32d']
+  link line: [ /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2 -plugin /usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so -plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//cc5trAd4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=/usr/local/opt/riscv/riscv32-unknown-elf -melf32lriscv -o cmTC_4580a /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o -L/usr/local/opt/libressl/lib -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0 -L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib -L/usr/local/opt/riscv/riscv32-unknown-elf/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o -lgcc --start-group -lc -lgloss --end-group -lgcc /usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o]
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/opt/riscv/libexec/gcc/riscv32-unknown-elf/9.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/rk/xy6ws10x0n352c5nytjb27th0000gn/T//cc5trAd4.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgloss] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/usr/local/opt/riscv/riscv32-unknown-elf] ==> ignore
+    arg [-melf32lriscv] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_4580a] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib/crt0.o] ==> ignore
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtbegin.o] ==> ignore
+    arg [-L/usr/local/opt/libressl/lib] ==> dir [/usr/local/opt/libressl/lib]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+    arg [-L/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib]
+    arg [-L/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_4580a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--start-group] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgloss] ==> lib [gloss]
+    arg [--end-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/crtend.o] ==> ignore
+  collapse library dir [/usr/local/opt/libressl/lib] ==> [/usr/local/opt/libressl/lib]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0] ==> [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0]
+  collapse library dir [/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  collapse library dir [/usr/local/opt/riscv/riscv32-unknown-elf/lib] ==> [/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit libs: [gcc;c;gloss;gcc]
+  implicit dirs: [/usr/local/opt/libressl/lib;/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0;/usr/local/opt/riscv/riscv32-unknown-elf/lib]
+  implicit fwks: []
+
+

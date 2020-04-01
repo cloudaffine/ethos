@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ethos"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/chao.yang/Work/ethos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/chao.yang/Work/ethos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/chao.yang/Work/ethos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ethos">
+				<Option output="/Users/chao.yang/Work/ethos/cmake-build-debug/ethos" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chao.yang/Work/ethos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/chao.yang/Work/ethos/libkc/include"/>
+					<Add directory="/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include"/>
+					<Add directory="/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed"/>
+					<Add directory="/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 ethos"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ethos/fast">
+				<Option output="/Users/chao.yang/Work/ethos/cmake-build-debug/ethos" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chao.yang/Work/ethos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/chao.yang/Work/ethos/libkc/include"/>
+					<Add directory="/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include"/>
+					<Add directory="/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/include-fixed"/>
+					<Add directory="/usr/local/opt/riscv/lib/gcc/riscv32-unknown-elf/9.2.0/../../../../riscv32-unknown-elf/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 ethos/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/chao.yang/Work/ethos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/chao.yang/Work/ethos/kernel/console.c">
+			<Option target="ethos"/>
+		</Unit>
+		<Unit filename="/Users/chao.yang/Work/ethos/kernel/console.h">
+			<Option target="ethos"/>
+		</Unit>
+		<Unit filename="/Users/chao.yang/Work/ethos/kernel/entry.asm">
+			<Option target="ethos"/>
+		</Unit>
+		<Unit filename="/Users/chao.yang/Work/ethos/kernel/start.c">
+			<Option target="ethos"/>
+		</Unit>
+		<Unit filename="/Users/chao.yang/Work/ethos/kernel/vm.c">
+			<Option target="ethos"/>
+		</Unit>
+		<Unit filename="/Users/chao.yang/Work/ethos/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
