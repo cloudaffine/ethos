@@ -1,5 +1,4 @@
 #include "memlayout.h"
-#include "../libkc/console.h"
 #define PRINT_UART0(x) print_uart(UART0, x)
 
 void print_uart(volatile unsigned char* base_addr, const char *s) {
