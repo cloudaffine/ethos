@@ -6,6 +6,9 @@ extern "C" {
 
 #include "stdint.h"
 
+// CLZ - count leading zero
+// CTZ - count trailing zero
+
 #define clz(val) ({                         \
     int result;                             \
     switch(sizeof(val)) {                   \

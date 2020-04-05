@@ -39,11 +39,7 @@ set(CMAKE_LINKER riscv32-unknown-elf-ld)
 set(CMAKE_EXE_LINKER_FLAGS "-Wl,-T${CMAKE_SOURCE_DIR}/layout.ld")
 
 # headers path
-#include_directories(libkc/include)
-
-#file(GLOB_RECURSE LIBKC_SRCS "libkc/*c")
-#add_library(kc ${LIBKC_SRCS})
-
+include_directories(kernel/libkc/include)
 file(GLOB_RECURSE KERNEL_SRCS "kernel/*.c" "kernel/*.asm")
 
 # kernel

@@ -4,7 +4,10 @@ SECTIONS
 {
   /* text: test code section */
   . = 0x80000000;
-  .text : { *(.text) }
+  .text : {
+    *(.entry)
+    *(.text)
+  }
   /* data: Initialized data segment */
   .data : {
    . = ALIGN(4096);
