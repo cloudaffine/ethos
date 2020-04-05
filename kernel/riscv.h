@@ -1,8 +1,9 @@
 #include <stdint.h>
+#include "libkc/include/stdint.h"
 
 #define XLEN 32
-type int32_t xlen_t;
-type uint32_t u_xlen_t;
+typedef int32_t xlen_t;
+typedef uint32_t u_xlen_t;
 
 // which hart (core) is this?
 static inline u_xlen_t
@@ -359,33 +360,44 @@ sfence_vma()
 
 
 // Page table entry (PTE)
-typedef struct {
-    uint8_t v       :  1; // valid
-    uint8_t r       :  1; // read perm
-    uint8_t w       :  1; // write perm
-    uint8_t x       :  1; // execute perm
-    uint8_t u       :  1; // user page?
-    uint8_t g       :  1; //
-    uint8_t a       :  1; // accessed?
-    uint8_t d       :  1; // dirty?
-    uint8_t rsw     :  2; // reserved
-    uint16_t ppn0   : 10; // physical page number
-    uint16_t ppn1   : 12; // physical page number
-
+typedef union {
+    uint32_t packed;
+    struct {
+        uint8_t v       :  1; // valid
+        uint8_t r       :  1; // read perm
+        uint8_t w       :  1; // write perm
+        uint8_t x       :  1; // execute perm
+        uint8_t u       :  1; // user page?
+        uint8_t g       :  1; //
+        uint8_t a       :  1; // accessed?
+        uint8_t d       :  1; // dirty?
+        uint8_t rsw     :  2; // reserved
+        uint32_t ppn    : 22; // physical page number
+//        uint16_t ppn0   : 10; // physical page number
+//        uint16_t ppn1   : 12; // physical page number
+    } fields;
 } pte_t;
 
-typedef pte_t[1024] page_table_t; // 4K
+typedef pte_t page_table_t[1024]; // must be aligned to 4K
+
+
 
 // Supervisor Address Translation and Protection CSR
-typedef struct {
-    uint32_t ppn    : 22; // physical address of root page table
-    uint16_t asid   :  9; // Address Space Identifier
-    uint8_t  mode   :  1: // 0 - bare (no translation or protection) 1 - page-based 32-bit virtual addressing.
+typedef union {
+    uint32_t packed;
+    struct {
+        uint32_t ppn    : 22; // physical address of root page table
+        uint16_t asid   :  9; // Address Space Identifier
+        uint8_t  mode   :  1; // 0 - bare (no translation or protection) 1 - page-based 32-bit virtual addressing.
+    } fields;
 } satp_t;
 
 // virtual address
-typedef struct {
-    uint16_t offset : 12;
-    uint16_t vpn0   : 10; // virtual page number
-    uint16_t vpn1   : 10; // virtual page number
+typedef union {
+    uint32_t packed;
+    struct {
+        uint16_t offset : 12;
+        uint16_t vpn0   : 10; // virtual page number
+        uint16_t vpn1   : 10; // virtual page number
+    } fields;
 } va_t;

@@ -4,8 +4,6 @@
 #include <stdint.h>
 #include "riscv.h"
 
-void vmm_disable_paging() {
-    w_satp(0x0)
-}
+void vmm_disable_paging();
 
 #endif //ETHOS_VMM_H
