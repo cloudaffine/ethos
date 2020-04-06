@@ -59,7 +59,7 @@ if(CMAKE_BUILD_TYPE MATCHES Debug)
 endif()
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
-        COMMAND qemu-system-riscv32 -monitor telnet:127.0.0.1:1234,server,nowait -machine virt -m 512M -nographic -no-reboot -no-shutdown ${QEMU_FLAGS} -kernel ${CMAKE_BINARY_DIR}/ethos
+        COMMAND qemu-system-riscv32 -monitor telnet:127.0.0.1:1234,server,nowait -machine virt -m 2G -nographic -no-reboot -no-shutdown ${QEMU_FLAGS} -kernel ${CMAKE_BINARY_DIR}/ethos
         COMMENT "Running ethos kernel...")
 
 

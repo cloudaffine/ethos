@@ -1,12 +1,41 @@
+#include <stdio.h>
 #include "riscv.h"
 #include "memlayout.h"
 
-page_table_t root_page_table __attribute__((aligned(4096))); // each PTE maps 4M
-page_table_t mmio_page_table __attribute__((aligned(4096))); // secondary page table for MMIO in low 4M
-page_table_t kernel_page_table __attribute__((aligned(4096))); // secondary page table for kernel in upper 2G
+pagetable_t kernel_pagetable __attribute__((aligned(4096)));
 
-static uint32_t ppn(page_table_t *page_table) {
-    return ((uint32_t)page_table) / 4096;
+
+static uint32_t ppn(pt_t *pt) {
+    return ((uint32_t)pt) / 4096;
+}
+
+void vmm_init_pagetable(pagetable_t *tree, uint8_t user) {
+    for(uint32_t i = 0; i < 1024; ++i) {
+        for(uint32_t j = 0; j < 1024; ++j) {
+            pte_t pte = { .packed = 0x0 };
+            tree->secondary[i][j] = pte;
+        }
+    }
+    for(uint32_t i = 0; i < 1024; ++i) {
+        pte_t pte;
+        pte.fields.v = 0x1; // valid
+        pte.fields.r = 0x1; // read
+        pte.fields.w = 0x1; // write
+        pte.fields.x = 0x0; // disable execute
+        pte.fields.u = user == 0 ? 0x0 : 0x1; // kernel page
+        pte.fields.a = 0x0; // not access
+        pte.fields.d = 0x0; // not dirty
+        pte.fields.ppn = ppn(&(tree->secondary[i]));
+        tree->root[i] = pte;
+    }
+}
+
+void vmm_map_page(pagetable_t *pagetable, uint32_t pt_index, uint32_t pte_index, uint32_t ppn, uint8_t user) {
+    pte_t page_table_pte;
+    page_table_pte.fields.v = 0x1;
+    page_table_pte.fields.u = user == 0x0 ? 0x0 : 0x1;
+    page_table_pte.fields.ppn = ppn;
+    (pagetable->secondary)[pt_index][pte_index] = page_table_pte;
 }
 
 void vmm_disable_paging() {
@@ -14,36 +43,53 @@ void vmm_disable_paging() {
 }
 
 void vmm_enable_paging() {
+    vmm_init_pagetable(&kernel_pagetable, 0x0);
+    // identity mapping
+    //- MMIO
+    uint32_t mmio_4m_start = 0;
+    uint32_t mmio_4m_end = KERN_START / (4096 * 1024);
+    for(uint32_t i = mmio_4m_start; i < mmio_4m_end; ++i) {
+        for(uint32_t j = 0; j < 1024; ++j) {
+            vmm_map_page(&kernel_pagetable, i, j, 1024 * i + j, 0x0);
+        }
+    }
+
+    //- KERNEL
+    uint32_t kernel_4m_start = KERN_START / (4096 * 1024);
+    uint32_t kernel_4m_end = KERN_STOP / (4096 * 1024);
+    for(uint32_t i = kernel_4m_start; i < kernel_4m_end; ++i) {
+        for(uint32_t j = 0; j < 1024; ++j) {
+            vmm_map_page(&kernel_pagetable, i, j, 1024 * i + j, 0x0);
+        }
+    }
+
+    // set satp
     satp_t satp;
-    satp.fields.ppn = ppn(&root_page_table);
+    satp.fields.ppn = ppn(&kernel_pagetable.root);
+    satp.fields.asid = 0x000000000;
     satp.fields.mode = 0x1;
+    printf("satp: 0x%x (ppn: 0x%x asid: %x mode: %x)\n", satp, satp.fields.ppn, satp.fields.asid, satp.fields.mode);
     w_satp(satp.packed);
 }
 
-void vmm_init_identity_map() {
-    vmm_map_page_for_page_table(&mmio_page_table);
-    for(uint32_t i = 0; i < 1024; ++i) {
-        vmm_map_page_for_physical_page(&mmio_page_table, i);
+static void vmm_print_page_table(pt_t * pt) {
+    for(uint32_t i = 0; i < 5; ++i) {
+        pte_t pte = (*pt)[i];
+        printf("0x%x (ppn 0x%x)\n", pte, pte.fields.ppn);
     }
-    vmm_map_page_for_page_table(&kernel_page_table);
-    for(uint32_t i = 0; i < 1024; ++i) {
-        vmm_map_page_for_physical_page(&kernel_page_table, KERNBASE / 4096 + i);
-    }
+    printf("... \n");
 }
 
-void vmm_map_page(page_table_t *page_table, uint32_t ppn) {
-    pte_t page_table_pte;
-    page_table_pte.fields.a = 0x1;
-    page_table_pte.fields.ppn = ppn;
-    (*page_table)[0] = page_table_pte;
+void vmm_info() {
+    printf("root page table: \n");
+    vmm_print_page_table(&kernel_pagetable.root);
+    printf("secondary page tables: \n");
+    vmm_print_page_table(&kernel_pagetable.secondary[0]);
+    vmm_print_page_table(&kernel_pagetable.secondary[512]);
+    vmm_print_page_table(&kernel_pagetable.secondary[543]);
+    vmm_print_page_table(&kernel_pagetable.secondary[544]);
 }
 
-// map a page for secondary page table
-void vmm_map_page_for_page_table(uint32_t ppn) {
-    vmm_map_page(&root_page_table, ppn);
-}
 
-// map a page for a physical page
-void vmm_map_page_for_physical_page(page_table_t *secondary_page_table, uint32_t ppn) {
-    vmm_map_page(secondary_page_table, ppn);
-}
+
+

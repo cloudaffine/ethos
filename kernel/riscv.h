@@ -378,8 +378,13 @@ typedef union {
     } fields;
 } pte_t;
 
-typedef pte_t page_table_t[1024]; // must be aligned to 4K
+typedef pte_t pt_t[1024]; // must be aligned to 4K
 
+// this is page table tree
+typedef struct {
+    pt_t root;
+    pt_t secondary[1024];
+} pagetable_t;
 
 
 // Supervisor Address Translation and Protection CSR

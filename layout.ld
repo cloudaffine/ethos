@@ -2,8 +2,10 @@ OUTPUT_ARCH( "riscv" )
 ENTRY( entry )
 SECTIONS
 {
-  /* text: test code section */
+  /* start from here QEMU -kernel will jump */
   . = 0x80000000;
+  kernel_start = .;
+
   .text : {
     *(.entry)
     *(.text)
@@ -23,9 +25,11 @@ SECTIONS
     *(.sdata) }
     .debug : { *(.debug)
   }
+
+  /* 32K for kernel stack */
   . += 0x8000;
   stack_top = .;
 
-  /* End of uninitalised data segement */
-  _end = .;
+  . = ALIGN(4096);
+  kernel_end = .;
 }
