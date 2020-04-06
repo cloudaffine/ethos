@@ -1,5 +1,5 @@
 #include <stdint.h>
-#include "libkc/include/stdint.h"
+#include <assert.h>
 
 #define XLEN 32
 typedef int32_t xlen_t;
@@ -287,6 +287,7 @@ intr_get()
     return (x & SSTATUS_SIE) != 0;
 }
 
+// ========= General registers =======
 static inline u_xlen_t
 r_sp()
 {
@@ -375,7 +376,7 @@ typedef union {
         uint32_t ppn    : 22; // physical page number
 //        uint16_t ppn0   : 10; // physical page number
 //        uint16_t ppn1   : 12; // physical page number
-    } fields;
+    } fields __attribute__((packed));
 } pte_t;
 
 typedef pte_t pt_t[1024]; // must be aligned to 4K
@@ -384,7 +385,7 @@ typedef pte_t pt_t[1024]; // must be aligned to 4K
 typedef struct {
     pt_t root;
     pt_t secondary[1024];
-} pagetable_t;
+} pagetable_t __attribute__((packed));
 
 
 // Supervisor Address Translation and Protection CSR
@@ -394,7 +395,7 @@ typedef union {
         uint32_t ppn    : 22; // physical address of root page table
         uint16_t asid   :  9; // Address Space Identifier
         uint8_t  mode   :  1; // 0 - bare (no translation or protection) 1 - page-based 32-bit virtual addressing.
-    } fields;
+    } fields __attribute__((packed));
 } satp_t;
 
 // virtual address
@@ -404,5 +405,13 @@ typedef union {
         uint16_t offset : 12;
         uint16_t vpn0   : 10; // virtual page number
         uint16_t vpn1   : 10; // virtual page number
-    } fields;
+    } fields __attribute__((packed));
 } va_t;
+
+static inline assert_structures() {
+    assert(sizeof(pte_t) == 4);
+    assert(sizeof(pagetable_t) == 1025 * 1024 * 4);
+    assert(sizeof(satp_t) == 4);
+    printf("### %d \n", sizeof(va_t));
+    assert(sizeof(va_t) == 4);
+}

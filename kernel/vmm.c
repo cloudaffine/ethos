@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdbool.h>
+#include <assert.h>
 #include "riscv.h"
 #include "memlayout.h"
 
@@ -9,11 +11,11 @@ static uint32_t ppn(pt_t *pt) {
     return ((uint32_t)pt) / 4096;
 }
 
-void vmm_init_pagetable(pagetable_t *tree, uint8_t user) {
+void vmm_init_pagetable(pagetable_t *pagetable, uint8_t user) {
     for(uint32_t i = 0; i < 1024; ++i) {
         for(uint32_t j = 0; j < 1024; ++j) {
             pte_t pte = { .packed = 0x0 };
-            tree->secondary[i][j] = pte;
+            pagetable->secondary[i][j] = pte;
         }
     }
     for(uint32_t i = 0; i < 1024; ++i) {
@@ -25,8 +27,10 @@ void vmm_init_pagetable(pagetable_t *tree, uint8_t user) {
         pte.fields.u = user == 0 ? 0x0 : 0x1; // kernel page
         pte.fields.a = 0x0; // not access
         pte.fields.d = 0x0; // not dirty
-        pte.fields.ppn = ppn(&(tree->secondary[i]));
-        tree->root[i] = pte;
+        pte.fields.ppn = ppn(&(pagetable->secondary[i]));
+        pagetable->root[i] = pte;
+
+        assert(pagetable->root[i].fields.ppn * 4096 == &pagetable->secondary[i]);
     }
 }
 
@@ -43,6 +47,7 @@ void vmm_disable_paging() {
 }
 
 void vmm_enable_paging() {
+    assert_structures();
     vmm_init_pagetable(&kernel_pagetable, 0x0);
     // identity mapping
     //- MMIO
