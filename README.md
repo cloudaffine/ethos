@@ -25,4 +25,13 @@ P – Standard Extension for Packed-SIMD Instructions
 V – Standard Extension for Vector Operations
 N – Standard Extension for User-Level Interrupts
 H – Standard Extension for Hypervisor
-```__
+```
+
+## Dev
+
+### Build riscv32 toolchain
+```
+git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
+./configure --prefix=/usr/local/opt/riscv32 --with-arch=rv32gc --with-abi=ilp32d
+make
+```

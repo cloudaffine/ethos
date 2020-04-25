@@ -11,7 +11,8 @@ static uint32_t ppn(pt_t *pt) {
     return ((uint32_t)pt) / 4096;
 }
 
-void vmm_init_pagetable(pagetable_t *pagetable, uint8_t user) {
+// init kernel pagetable
+void vmm_init_pagetable(pagetable_t *pagetable, bool_t user) {
     for(uint32_t i = 0; i < 1024; ++i) {
         for(uint32_t j = 0; j < 1024; ++j) {
             pte_t pte = { .raw = 0x0 };
@@ -24,7 +25,7 @@ void vmm_init_pagetable(pagetable_t *pagetable, uint8_t user) {
         pte.r = 0x1; // read
         pte.w = 0x1; // write
         pte.x = 0x0; // disable execute
-        pte.u = user == 0 ? 0x0 : 0x1; // kernel page
+        pte.u = user == false ? 0x0 : 0x1; // kernel page
         pte.a = 0x0; // not access
         pte.d = 0x0; // not dirty
         pte.ppn = ppn(&(pagetable->secondary[i]));
@@ -34,10 +35,10 @@ void vmm_init_pagetable(pagetable_t *pagetable, uint8_t user) {
     }
 }
 
-void vmm_map_page(pagetable_t *pagetable, uint32_t pt_index, uint32_t pte_index, uint32_t ppn, uint8_t user) {
+void vmm_map_page(pagetable_t *pagetable, uint32_t pt_index, uint32_t pte_index, uint32_t ppn, bool_t user) {
     pte_t page_table_pte;
     page_table_pte.v = 0x1;
-    page_table_pte.u = user == 0x0 ? 0x0 : 0x1;
+    page_table_pte.u = user == false ? 0x0 : 0x1;
     page_table_pte.ppn = ppn;
     (pagetable->secondary)[pt_index][pte_index] = page_table_pte;
 }
@@ -48,14 +49,14 @@ void vmm_disable_paging() {
 
 void vmm_enable_paging() {
     assert_structures();
-    vmm_init_pagetable(&kernel_pagetable, 0x0);
+    vmm_init_pagetable(&kernel_pagetable, false);
     // identity mapping
     //- MMIO
     uint32_t mmio_4m_start = 0;
     uint32_t mmio_4m_end = KERN_START / (4096 * 1024);
     for(uint32_t i = mmio_4m_start; i < mmio_4m_end; ++i) {
         for(uint32_t j = 0; j < 1024; ++j) {
-            vmm_map_page(&kernel_pagetable, i, j, 1024 * i + j, 0x0);
+            vmm_map_page(&kernel_pagetable, i, j, 1024 * i + j, false);
         }
     }
 
@@ -64,7 +65,7 @@ void vmm_enable_paging() {
     uint32_t kernel_4m_end = KERN_STOP / (4096 * 1024);
     for(uint32_t i = kernel_4m_start; i < kernel_4m_end; ++i) {
         for(uint32_t j = 0; j < 1024; ++j) {
-            vmm_map_page(&kernel_pagetable, i, j, 1024 * i + j, 0x0);
+            vmm_map_page(&kernel_pagetable, i, j, 1024 * i + j, false);
         }
     }
 

@@ -21,7 +21,7 @@ set(CMAKE_AR "riscv32-unknown-elf-ar")
 set(CMAKE_RANLIB  "riscv32-unknown-elf-ranlib")
 
 # ASM
-#enable_language(ASM)
+enable_language(ASM)
 set(CMAKE_ASM_COMPILER "riscv32-unknown-elf-as")
 set(CMAKE_ASM_OBJECT_FORMAT "elf")
 set(CMAKE_ASM_COMPILE_OBJECT "${CMAKE_ASM_COMPILER} ${CMAKE_ASM_FLAGS} ${ASM_FLAGS} -o <OBJECT> <SOURCE>")
@@ -39,13 +39,12 @@ set(CMAKE_LINKER riscv32-unknown-elf-ld)
 set(CMAKE_EXE_LINKER_FLAGS "-Wl,-T${CMAKE_SOURCE_DIR}/layout.ld")
 
 # headers path
-include_directories(kernel/libkc/include)
+include_directories(kernel/libk/include)
 file(GLOB_RECURSE KERNEL_SRCS "kernel/*.c" "kernel/*.asm")
 
 # kernel
 add_executable(${CMAKE_PROJECT_NAME} ${KERNEL_SRCS})
-target_link_libraries(${CMAKE_PROJECT_NAME})
-
+#target_link_libraries(${CMAKE_PROJECT_NAME})
 
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
@@ -61,5 +60,6 @@ add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
         COMMAND qemu-system-riscv32 -monitor telnet:127.0.0.1:1234,server,nowait -machine virt -m 2G -nographic -no-reboot -no-shutdown ${QEMU_FLAGS} -kernel ${CMAKE_BINARY_DIR}/ethos
         COMMENT "Running ethos kernel...")
+
 
 
