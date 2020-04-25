@@ -14,31 +14,31 @@ static uint32_t ppn(pt_t *pt) {
 void vmm_init_pagetable(pagetable_t *pagetable, uint8_t user) {
     for(uint32_t i = 0; i < 1024; ++i) {
         for(uint32_t j = 0; j < 1024; ++j) {
-            pte_t pte = { .packed = 0x0 };
+            pte_t pte = { .raw = 0x0 };
             pagetable->secondary[i][j] = pte;
         }
     }
     for(uint32_t i = 0; i < 1024; ++i) {
         pte_t pte;
-        pte.fields.v = 0x1; // valid
-        pte.fields.r = 0x1; // read
-        pte.fields.w = 0x1; // write
-        pte.fields.x = 0x0; // disable execute
-        pte.fields.u = user == 0 ? 0x0 : 0x1; // kernel page
-        pte.fields.a = 0x0; // not access
-        pte.fields.d = 0x0; // not dirty
-        pte.fields.ppn = ppn(&(pagetable->secondary[i]));
+        pte.v = 0x1; // valid
+        pte.r = 0x1; // read
+        pte.w = 0x1; // write
+        pte.x = 0x0; // disable execute
+        pte.u = user == 0 ? 0x0 : 0x1; // kernel page
+        pte.a = 0x0; // not access
+        pte.d = 0x0; // not dirty
+        pte.ppn = ppn(&(pagetable->secondary[i]));
         pagetable->root[i] = pte;
 
-        assert(pagetable->root[i].fields.ppn * 4096 == &pagetable->secondary[i]);
+        assert(pagetable->root[i].ppn * 4096 == &pagetable->secondary[i]);
     }
 }
 
 void vmm_map_page(pagetable_t *pagetable, uint32_t pt_index, uint32_t pte_index, uint32_t ppn, uint8_t user) {
     pte_t page_table_pte;
-    page_table_pte.fields.v = 0x1;
-    page_table_pte.fields.u = user == 0x0 ? 0x0 : 0x1;
-    page_table_pte.fields.ppn = ppn;
+    page_table_pte.v = 0x1;
+    page_table_pte.u = user == 0x0 ? 0x0 : 0x1;
+    page_table_pte.ppn = ppn;
     (pagetable->secondary)[pt_index][pte_index] = page_table_pte;
 }
 
@@ -70,17 +70,17 @@ void vmm_enable_paging() {
 
     // set satp
     satp_t satp;
-    satp.fields.ppn = ppn(&kernel_pagetable.root);
-    satp.fields.asid = 0x000000000;
-    satp.fields.mode = 0x1;
-    printf("satp: 0x%x (ppn: 0x%x asid: %x mode: %x)\n", satp, satp.fields.ppn, satp.fields.asid, satp.fields.mode);
-    w_satp(satp.packed);
+    satp.ppn = ppn(&kernel_pagetable.root);
+    satp.asid = 0x000000000;
+    satp.mode = 0x1;
+    printf("satp: 0x%x (ppn: 0x%x asid: %x mode: %x)\n", satp, satp.ppn, satp.asid, satp.mode);
+    w_satp(satp.raw);
 }
 
 static void vmm_print_page_table(pt_t * pt) {
     for(uint32_t i = 0; i < 5; ++i) {
         pte_t pte = (*pt)[i];
-        printf("0x%x (ppn 0x%x)\n", pte, pte.fields.ppn);
+        printf("0x%x (ppn 0x%x)\n", pte, pte.ppn);
     }
     printf("... \n");
 }

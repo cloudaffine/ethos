@@ -11,8 +11,11 @@
 
 #define assert(expression)  \
 	((void)((expression) ? 0 : \
-		(printf(__FILE__":%u: failed assertion '"#expression"'\n", \
+		(printf(__FILE__":%u failed assertion failure \n", \
 			__LINE__), 0)))
+
+#define assert_type(type, size)  \
+    (assert(sizeof(type) == (size)))
 
 #endif
 

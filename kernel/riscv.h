@@ -362,7 +362,7 @@ sfence_vma()
 
 // Page table entry (PTE)
 typedef union {
-    uint32_t packed;
+    uint32_t raw;
     struct {
         uint8_t v       :  1; // valid
         uint8_t r       :  1; // read perm
@@ -376,7 +376,7 @@ typedef union {
         uint32_t ppn    : 22; // physical page number
 //        uint16_t ppn0   : 10; // physical page number
 //        uint16_t ppn1   : 12; // physical page number
-    } fields __attribute__((packed));
+    } __attribute__((packed));
 } pte_t;
 
 typedef pte_t pt_t[1024]; // must be aligned to 4K
@@ -390,28 +390,27 @@ typedef struct {
 
 // Supervisor Address Translation and Protection CSR
 typedef union {
-    uint32_t packed;
+    uint32_t raw;
     struct {
         uint32_t ppn    : 22; // physical address of root page table
         uint16_t asid   :  9; // Address Space Identifier
         uint8_t  mode   :  1; // 0 - bare (no translation or protection) 1 - page-based 32-bit virtual addressing.
-    } fields __attribute__((packed));
+    } __attribute__((packed));
 } satp_t;
 
 // virtual address
 typedef union {
-    uint32_t packed;
+    uint32_t raw;
     struct {
         uint16_t offset : 12;
         uint16_t vpn0   : 10; // virtual page number
         uint16_t vpn1   : 10; // virtual page number
-    } fields __attribute__((packed));
+    } __attribute__((packed));
 } va_t;
 
 static inline assert_structures() {
-    assert(sizeof(pte_t) == 4);
-    assert(sizeof(pagetable_t) == 1025 * 1024 * 4);
-    assert(sizeof(satp_t) == 4);
-    printf("### %d \n", sizeof(va_t));
-    assert(sizeof(va_t) == 4);
+    assert_type(pte_t, 4);
+    assert_type(pagetable_t, 1025 * 1024 * 4);
+    assert_type(satp_t, 4);
+    assert_type(va_t, 4);
 }
