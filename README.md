@@ -1,4 +1,4 @@
-# ethos
+# arvos
 a RISC-V kernel to support RV32I arch.
 
 ## Install 
