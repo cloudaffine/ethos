@@ -1,22 +1,18 @@
 // qemu -machine virt is set up like this,
-// based on qemu's hw/riscv/virt.c:
+// based on qemu's hw/riscv/virt.c: https://github.com/qemu/qemu/blob/master/hw/riscv/virt.c
 //
 // 00001000 -- boot ROM, provided by qemu
 // 02000000 -- CLINT
 // 0C000000 -- PLIC
 // 10000000 -- uart0
 // 10001000 -- virtio disk
-// 80000000 -- boot ROM jumps here in machine mode
-//             -kernel loads the kernel here
+// 80000000 -- boot ROM jumps here in machine mode: -kernel loads the kernel here
 // unused RAM after 80000000.
 
 #ifndef ARVOS_LAYOUT_H
 #define ARVOS_LAYOUT_H
 
 #include <stdint.h>
-
-extern char kernel_start;
-extern char kernel_end;
 
 #define UART0 0x10000000
 #define UART0_IRQ 10
@@ -40,6 +36,15 @@ extern char kernel_end;
 #define PLIC_SPRIORITY(hart) (PLIC + 0x201000 + (hart)*0x2000)
 #define PLIC_MCLAIM(hart) (PLIC + 0x200004 + (hart)*0x2000)
 #define PLIC_SCLAIM(hart) (PLIC + 0x201004 + (hart)*0x2000)
+
+#define DRAM 0x80000000
+
+extern char kernel_start;
+extern char kernel_end;
+
+#if DRAM != kernel_start
+#warning "ELF should be starting from DRAM base"
+#endif
 
 #define KERN_START (uint32_t)&kernel_start // from upper 2G, in QEMU monitor: info mtree
 #define KERN_END   (uint32_t)&kernel_end   // actually the kernel end

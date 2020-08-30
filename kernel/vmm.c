@@ -78,7 +78,8 @@ void vmm_enable_paging() {
     w_satp(satp.raw);
 }
 
-static void vmm_print_page_table(pt_t * pt) {
+static void vmm_print_page_table(pt_t * pt, char* description) {
+    printf("%s\n", description);
     for(uint32_t i = 0; i < 5; ++i) {
         pte_t pte = (*pt)[i];
         printf("0x%x (ppn 0x%x)\n", pte, pte.ppn);
@@ -87,13 +88,11 @@ static void vmm_print_page_table(pt_t * pt) {
 }
 
 void vmm_info() {
-    printf("root page table: \n");
-    vmm_print_page_table(&kernel_pagetable.root);
-    printf("secondary page tables: \n");
-    vmm_print_page_table(&kernel_pagetable.secondary[0]);
-    vmm_print_page_table(&kernel_pagetable.secondary[512]);
-    vmm_print_page_table(&kernel_pagetable.secondary[543]);
-    vmm_print_page_table(&kernel_pagetable.secondary[544]);
+    vmm_print_page_table(&kernel_pagetable.root, "root page table");
+    vmm_print_page_table(&kernel_pagetable.secondary[0], "secondary page tables: 0");
+    vmm_print_page_table(&kernel_pagetable.secondary[512], "secondary page tables: 512");
+    vmm_print_page_table(&kernel_pagetable.secondary[543], "secondary page tables: 513");
+    vmm_print_page_table(&kernel_pagetable.secondary[544], "secondary page tables: 514");
 }
 
 
