@@ -10,8 +10,8 @@
 //             -kernel loads the kernel here
 // unused RAM after 80000000.
 
-#ifndef ETHOS_MEMLAYOUT_H
-#define ETHOS_MEMLAYOUT_H
+#ifndef ARVOS_LAYOUT_H
+#define ARVOS_LAYOUT_H
 
 #include <stdint.h>
 
@@ -48,4 +48,4 @@ extern char kernel_end;
 #define RAMSIZE  0x200000   // total RAM size 2G
 
 
-#endif //ETHOS_MEMLAYOUT_H
+#endif //ARVOS_LAYOUT_H

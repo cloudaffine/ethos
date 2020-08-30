@@ -1,5 +1,5 @@
 #include "console.h"
-#include "memlayout.h"
+#include "layout.h"
 
 int console_putchar(const char ch) {
     volatile unsigned char* base_addr = (unsigned char*)UART0;

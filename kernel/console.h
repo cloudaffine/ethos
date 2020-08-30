@@ -1,7 +1,7 @@
-#ifndef ETHOS_CONSOLE_H
-#define ETHOS_CONSOLE_H
+#ifndef ARVOS_CONSOLE_H
+#define ARVOS_CONSOLE_H
 
 extern int console_putchar(const char ch);
 extern int console_getchar();
 
-#endif //ETHOS_CONSOLE_H
+#endif //ARVOS_CONSOLE_H

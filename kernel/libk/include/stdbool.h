@@ -1,5 +1,5 @@
-#ifndef ETHOS_STDBOOL_H
-#define ETHOS_STDBOOL_H
+#ifndef ARVOS_STDBOOL_H
+#define ARVOS_STDBOOL_H
 
 /*
  * Just yer ordinary boolean type.
@@ -24,4 +24,4 @@ typedef unsigned char		bool_t;
 #define __bool_true_false_are_defined 1
 
 
-#endif //ETHOS_STDBOOL_H
+#endif //ARVOS_STDBOOL_H

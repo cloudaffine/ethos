@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include <assert.h>
 #include "riscv.h"
-#include "memlayout.h"
+#include "layout.h"
 
 pagetable_t kernel_pagetable __attribute__((aligned(4096)));
 

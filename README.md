@@ -1,5 +1,5 @@
 # arvos
-a RISC-V kernel to support RV32I arch.
+a RISC-V kernel to support RV32I arch. A new attempt on RISC-V based on my past X86 experiment: [cosmos](https://github.com/chaoyangnz/cosmos).
 
 ## Install 
 
@@ -35,3 +35,9 @@ git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
 ./configure --prefix=/usr/local/opt/riscv32 --with-arch=rv32gc --with-abi=ilp32d
 make
 ```
+
+## How to run
+
+Run `./startup.sh`
+
+If you need to switch to QEMU monitor, type `Ctl + A`, then `C`. We are using [-serial mon:stdio](https://kashyapc.wordpress.com/2016/02/11/qemu-command-line-behavior-of-serial-stdio-vs-serial-monstdio/) option.

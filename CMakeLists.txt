@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.13)
 set(CMAKE_C_COMPILER_WORKS "STATIC_LIBRARY")
-project(ethos C ASM)
+project(arvos C ASM)
 
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR riscv)
@@ -36,7 +36,7 @@ set(CMAKE_CXX_COMPILER "riscv32-unknown-elf-g++")
 
 # LINKER
 set(CMAKE_LINKER riscv32-unknown-elf-ld)
-set(CMAKE_EXE_LINKER_FLAGS "-Wl,-T${CMAKE_SOURCE_DIR}/layout.ld")
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,-T${CMAKE_SOURCE_DIR}/kernel/layout.ld")
 
 # headers path
 include_directories(kernel/libk/include)
@@ -48,7 +48,7 @@ add_executable(${CMAKE_PROJECT_NAME} ${KERNEL_SRCS})
 
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
-        COMMAND riscv32-unknown-elf-objdump -d -D ethos > ethos.elfdump && hexdump ethos > ethos.hexdump
+        COMMAND riscv32-unknown-elf-objdump -d -D arvos > arvos.elfdump && hexdump arvos > arvos.hexdump
         COMMENT "COPY kernel to another file")
 
 
@@ -58,8 +58,9 @@ if(CMAKE_BUILD_TYPE MATCHES Debug)
 endif()
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
-        COMMAND qemu-system-riscv32 -monitor telnet:127.0.0.1:1234,server,nowait -machine virt -m 2G -nographic -no-reboot -no-shutdown ${QEMU_FLAGS} -kernel ${CMAKE_BINARY_DIR}/ethos
-        COMMENT "Running ethos kernel...")
+        COMMAND qemu-system-riscv32 -serial mon:stdio -machine virt -m 2G -nographic -no-reboot -no-shutdown ${QEMU_FLAGS} -kernel ${CMAKE_BINARY_DIR}/arvos
+#        -monitor telnet:127.0.0.1:1234,server,nowait
+        COMMENT "Running arvos kernel...")
 
 
 

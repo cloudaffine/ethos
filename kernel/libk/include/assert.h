@@ -1,5 +1,5 @@
-#ifndef ETHOS_ASSERT_H
-#define ETHOS_ASSERT_H
+#ifndef ARVOS_ASSERT_H
+#define ARVOS_ASSERT_H
 
 #include <stdio.h>
 
@@ -19,4 +19,4 @@
 
 #endif
 
-#endif //ETHOS_ASSERT_H
+#endif //ARVOS_ASSERT_H
