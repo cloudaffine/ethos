@@ -8,6 +8,7 @@
 // 10001000 -- virtio disk
 // 80000000 -- boot ROM jumps here in machine mode: -kernel loads the kernel here
 // unused RAM after 80000000.
+// If physical ram is larger than 2G, only lower 2G can be addressable.
 
 #ifndef ARVOS_LAYOUT_H
 #define ARVOS_LAYOUT_H
@@ -39,18 +40,17 @@
 
 #define DRAM 0x80000000
 
+#define RAMSIZE  0x200000   // total RAM size 2G
+
 extern char kernel_start;
 extern char kernel_end;
-
-#if DRAM != kernel_start
-#warning "ELF should be starting from DRAM base"
-#endif
 
 #define KERN_START (uint32_t)&kernel_start // from upper 2G, in QEMU monitor: info mtree
 #define KERN_END   (uint32_t)&kernel_end   // actually the kernel end
 #define KERN_STOP (KERN_START + 128*1024*1024) // Reserved 128M for kernel use
 
-#define RAMSIZE  0x200000   // total RAM size 2G
-
+#if DRAM != KERN_START
+#error "ELF kernel should be loaded from DRAM base"
+#endif
 
 #endif //ARVOS_LAYOUT_H
