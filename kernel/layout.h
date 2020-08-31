@@ -8,7 +8,7 @@
 // 10001000 -- virtio disk
 // 80000000 -- boot ROM jumps here in machine mode: -kernel loads the kernel here
 // unused RAM after 80000000.
-// If physical ram is larger than 2G, only lower 2G can be addressable.
+// Physical address space is 16G, RAM is starting from 2G, so a maximum 14G RAM can be addressable.
 
 #ifndef ARVOS_LAYOUT_H
 #define ARVOS_LAYOUT_H
