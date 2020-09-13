@@ -9,7 +9,7 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # tool chain definition
 set(ASM_FLAGS "-march=rv32imac -mabi=ilp32")
-set(C_FLAGS "-march=rv32imac -mabi=ilp32 -std=gnu99 -ffreestanding -nostdlib -nostdinc -nostartfiles -fno-aggressive-loop-optimizations -fno-zero-initialized-in-bss -O0 -Wall -Wextra")
+set(C_FLAGS "-march=rv32imafdc -mabi=ilp32 -mcmodel=medany -std=gnu99 -ffreestanding -nostdlib -nostdinc -nostartfiles -fno-aggressive-loop-optimizations -fno-zero-initialized-in-bss -O0 -Wall -Wextra")
 set(CMAKE_C_FLAGS_DEBUG "-ggdb")
 set(LINKER_FLAGS "")
 
@@ -58,8 +58,16 @@ if(CMAKE_BUILD_TYPE MATCHES Debug)
 endif()
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
-        COMMAND qemu-system-riscv32 -serial mon:stdio -machine virt -m 6G -nographic -no-reboot -no-shutdown ${QEMU_FLAGS} -kernel ${CMAKE_BINARY_DIR}/arvos
-#        -monitor telnet:127.0.0.1:1234,server,nowait
+        COMMAND qemu-system-riscv32
+            -serial mon:stdio
+            -machine virt
+            -m 2G
+            -nographic
+            -no-reboot
+            -no-shutdown ${QEMU_FLAGS}
+            -kernel ${CMAKE_BINARY_DIR}/arvos
+            -monitor telnet:127.0.0.1:1234,server,nowait
+            -bios none
         COMMENT "Running arvos kernel...")
 
 

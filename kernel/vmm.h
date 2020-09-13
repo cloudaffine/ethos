@@ -5,7 +5,13 @@
 #include <stdbool.h>
 #include "riscv.h"
 
-void vmm_init_pagetable(pagetable_t *pagetable, bool_t user);
+#define KB 1024
+#define MB (1024 * KB)
+#define PT_LEN 1024
+#define PAGE_SIZE (4 * KB)
+#define MEGA_PAGE_SIZE (PT_LEN * PAGE_SIZE)
+
+void vmm_init_kernel_pagetable(pagetable_t *pagetable);
 void vmm_disable_paging();
 void vmm_enable_paging();
 void vmm_info();

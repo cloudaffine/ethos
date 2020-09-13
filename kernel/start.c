@@ -1,14 +1,40 @@
 #include <stdio.h>
-#include "layout.h"
-#include "vmm.h"
+#include "riscv.h"
 
+void main();
+
+// Run in machine mode
 void start() {
-    const char* banner = "\033[0;31m     ___      .______     ____    ____  ______        _______.\n    /   \\     |   _  \\    \\   \\  /   / /  __  \\      /       |\n   /  ^  \\    |  |_)  |    \\   \\/   / |  |  |  |    |   (----`\n  /  /_\\  \\   |      /      \\      /  |  |  |  |     \\   \\    \n /  _____  \\  |  |\\  \\----.  \\    /   |  `--'  | .----)   |   \n/__/     \\__\\ | _| `._____|   \\__/     \\______/  |_______/   \033[0m\n";
-    const char* version = "\033[0;36mversion: 0.1 \033[0m\n\n";
-    const char* msg = "Hello world, Ethos!\n";
-    printf("%s %s", banner, version);
-    printf("kernel: 0x%x ~ 0x%x .. 0x%x \n", KERN_START, KERN_STOP, KERN_END);
-    vmm_enable_paging();
-//    asm volatile("mret");
-    vmm_info();
+    // set M Previous Privilege mode to Supervisor, for mret.
+    mstatus_t mstatus = { .raw = r_mstatus()};
+    mstatus.mpp = 0x1;
+    w_mstatus(mstatus.raw);
+//    unsigned long x = r_mstatus();
+//    x &= ~MSTATUS_MPP_MASK;
+//    x |= MSTATUS_MPP_S;
+//    w_mstatus(x);
+
+    // set M Exception Program Counter to main, for mret.
+    // requires gcc -mcmodel=medany
+    w_mepc((uint32_t)main);
+
+    // disable paging for now.
+    w_satp(0);
+
+    // delegate all interrupts and exceptions to supervisor mode.
+    w_medeleg(0xffff);
+    w_mideleg(0xffff);
+    w_sie(r_sie() | SIE_SEIE | SIE_STIE | SIE_SSIE);
+
+    // ask for clock interrupts.
+//    timerinit();
+
+    // keep each CPU's hartid in its tp register, for cpuid().
+    int id = r_mhartid();
+    w_tp(id);
+
+    // switch to supervisor mode and jump to main().
+    printf("ready to switch to supervisor mode\n");
+    asm volatile("mret");
 }
+

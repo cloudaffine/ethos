@@ -1,3 +1,6 @@
+#ifndef ARVOS_RISCV_H
+#define ARVOS_RISCV_H
+
 #include <stdint.h>
 #include <assert.h>
 
@@ -359,6 +362,34 @@ sfence_vma()
 // that have the high bit set.
 #define MAXVA (1L << (9 + 9 + 9 + 12 - 1))
 
+// mstatus
+typedef union {
+    uint32_t raw;
+    struct {
+        uint8_t wpri0   : 1;
+        uint8_t sie     : 1;
+        uint8_t wpri1   : 1;
+        uint8_t mie     : 1;
+        uint8_t wpri2   : 1;
+        uint8_t spie    : 1;
+        uint8_t ube     : 1;
+        uint8_t mpie    : 1;
+        uint8_t spp     : 1;
+        uint8_t wpri3   : 2;
+        uint8_t mpp     : 2;
+        uint8_t fs      : 2;
+        uint8_t xs      : 2;
+        uint8_t mprv    : 1;
+        uint8_t sum     : 1;
+        uint8_t mxr     : 1;
+        uint8_t tvm     : 1;
+        uint8_t tw      : 1;
+        uint8_t tsr     : 1;
+        uint8_t wpri4   : 8;
+        uint8_t sd      : 1;
+    };
+} mstatus_t;
+
 
 // Page table entry (PTE)
 typedef union {
@@ -374,8 +405,6 @@ typedef union {
         uint8_t d       :  1; // dirty?
         uint8_t rsw     :  2; // reserved
         uint32_t ppn    : 22; // physical page number
-//        uint16_t ppn0   : 10; // physical page number
-//        uint16_t ppn1   : 12; // physical page number
     } __attribute__((packed));
 } pte_t;
 
@@ -408,9 +437,23 @@ typedef union {
     } __attribute__((packed));
 } va_t;
 
+// physical address in privilege mode
+typedef union {
+    uint64_t raw;
+    struct {
+        uint16_t offset : 12;
+        uint32_t ppn    : 22;
+        uint32_t _      : 20; // filler
+    } __attribute__((packed));
+} pa_t;
+
 static inline assert_structures() {
     assert_type(pte_t, 4);
     assert_type(pagetable_t, 1025 * 1024 * 4);
     assert_type(satp_t, 4);
     assert_type(va_t, 4);
+    assert_type(pa_t, 8);
 }
+
+
+#endif //ARVOS_RISCV_H
