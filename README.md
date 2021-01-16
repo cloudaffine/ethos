@@ -4,7 +4,8 @@ a RISC-V kernel to support RV32I arch. A new attempt on RISC-V based on my past 
 ## Install 
 
 ```
-brew install riscv-tools
+brew tap riscv/riscv
+brew install riscv-gnu-toolchain --with-multilib
 ```
 
 
@@ -30,6 +31,9 @@ H – Standard Extension for Hypervisor
 ## Dev
 
 ### Build riscv32 toolchain
+
+If you don't want to get pre-compiled binaries from Homebrew, you can build the RISC-V toolchain yourself.
+
 ```
 git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
 ./configure --prefix=/usr/local/opt/riscv32 --with-arch=rv32gc --with-abi=ilp32d
