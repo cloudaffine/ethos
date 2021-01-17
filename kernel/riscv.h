@@ -455,5 +455,18 @@ static inline assert_structures() {
     assert_type(pa_t, 8);
 }
 
+static inline uint32_t make_satp(satp_t satp) {
+    return satp.ppn << 22 | satp.asid << 1 | satp.mode;
+}
+
+static inline uint32_t make_va(va_t va) {
+    return va.offset << 20 | va.vpn0 < 10 | va.vpn1;
+}
+
+static inline uint64_t make_pa(pa_t pa) {
+    return pa.offset << 44 | pa.ppn << 20 | pa._;
+}
+
+
 
 #endif //ARVOS_RISCV_H

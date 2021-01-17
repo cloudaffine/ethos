@@ -81,12 +81,14 @@ void vmm_enable_paging() {
     satp.ppn = ppn(&kernel_pagetable.root);
     satp.asid = 0x000000000;
     satp.mode = 0x1;
-    printf("satp: 0x%x (ppn: 0x%x asid: %x mode: %x) -> 0x%x\n", satp.raw, satp.ppn, satp.asid, satp.mode, satp.ppn << 12);
+    uint32_t ppn_val = ppn(&kernel_pagetable.root);
+    printf("%x \n", ppn_val);
+    uint32_t s = make_satp(satp);
+    printf("satp: 0x%x (ppn: 0x%x asid: %x mode: %x) -> 0x%x\n", s, satp.ppn, satp.asid, satp.mode, satp.ppn << 12);
     vmm_info();
-    w_satp(satp.raw);
-    printf("##### \n");
-//    sfence_vma();
-    printf("####!!!!# %x\n", r_satp());
+    w_satp(s);
+    sfence_vma();
+    printf("stap %x\n", r_satp());
 }
 
 static void vmm_print_page_table(pt_t * pt, char* description) {

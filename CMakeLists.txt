@@ -16,30 +16,32 @@ set(LINKER_FLAGS "")
 ##################### CROSS COMPILING TOOL CHAIN ############################
 set(_CMAKE_TOOLCHAIN_PREFIX "riscv32-unknown-elf")
 
+set(RISCV "/usr/local/opt/riscv32/bin/")
+
 # BINUTILS
-set(CMAKE_AR "riscv32-unknown-elf-ar")
-set(CMAKE_RANLIB  "riscv32-unknown-elf-ranlib")
+set(CMAKE_AR "${RISCV}riscv32-unknown-elf-ar")
+set(CMAKE_RANLIB  "${RISCV}riscv32-unknown-elf-ranlib")
 
 # ASM
 enable_language(ASM)
-set(CMAKE_ASM_COMPILER "riscv32-unknown-elf-as")
+set(CMAKE_ASM_COMPILER "${RISCV}riscv32-unknown-elf-as")
 set(CMAKE_ASM_OBJECT_FORMAT "elf")
 set(CMAKE_ASM_COMPILE_OBJECT "${CMAKE_ASM_COMPILER} ${CMAKE_ASM_FLAGS} ${ASM_FLAGS} -o <OBJECT> <SOURCE>")
 
 # C COMPILER
 enable_language(C)
-set(CMAKE_C_COMPILER "riscv32-unknown-elf-gcc")
+set(CMAKE_C_COMPILER "${RISCV}riscv32-unknown-elf-gcc")
 set(CMAKE_C_SYSROOT_FLAG "")
 set(CMAKE_C_FLAGS "${C_FLAGS}")
 set(CMAKE_C_LINK_FLAGS "")
-set(CMAKE_CXX_COMPILER "riscv32-unknown-elf-g++")
+set(CMAKE_CXX_COMPILER "${RISCV}riscv32-unknown-elf-g++")
 
 # LINKER
-set(CMAKE_LINKER riscv32-unknown-elf-ld)
+set(CMAKE_LINKER ${RISCV}riscv32-unknown-elf-ld)
 set(CMAKE_EXE_LINKER_FLAGS "-Wl,-T${CMAKE_SOURCE_DIR}/kernel/layout.ld")
 
-file(GLOB_RECURSE LIBC_SRCS "libc/*.c")
-file(GLOB_RECURSE KERNEL_SRCS "kernel/*.c" "kernel/*.asm")
+file(GLOB_RECURSE LIBC_SRCS "libc/*.c" "libc/*.h")
+file(GLOB_RECURSE KERNEL_SRCS "kernel/*.c" "kernel/*.asm" "kernel/*.c")
 
 # headers path
 include_directories(libc/include)
@@ -65,7 +67,6 @@ endif()
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
         COMMAND qemu-system-riscv32
-
             -machine virt
             -m 2G
             -no-reboot

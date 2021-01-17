@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "riscv.h"
+#include "console.h"
 
 void main();
 
@@ -33,6 +34,7 @@ void start() {
     int id = r_mhartid();
     w_tp(id);
 
+    console_init();
     // switch to supervisor mode and jump to main().
     printf("ready to switch to supervisor mode\n");
     asm volatile("mret");
