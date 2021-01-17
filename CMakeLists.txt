@@ -38,13 +38,19 @@ set(CMAKE_CXX_COMPILER "riscv32-unknown-elf-g++")
 set(CMAKE_LINKER riscv32-unknown-elf-ld)
 set(CMAKE_EXE_LINKER_FLAGS "-Wl,-T${CMAKE_SOURCE_DIR}/kernel/layout.ld")
 
-# headers path
-include_directories(kernel/libk/include)
+file(GLOB_RECURSE LIBC_SRCS "libc/*.c")
 file(GLOB_RECURSE KERNEL_SRCS "kernel/*.c" "kernel/*.asm")
+
+# headers path
+include_directories(libc/include)
+
+# libc for kernel only
+add_library(c STATIC ${LIBC_SRCS})
+target_link_libraries(c)
 
 # kernel
 add_executable(${CMAKE_PROJECT_NAME} ${KERNEL_SRCS})
-#target_link_libraries(${CMAKE_PROJECT_NAME})
+target_link_libraries(${CMAKE_PROJECT_NAME} c)
 
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
@@ -59,14 +65,16 @@ endif()
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
         COMMAND qemu-system-riscv32
-            -serial mon:stdio
+
             -machine virt
             -m 2G
-            -nographic
             -no-reboot
             -no-shutdown ${QEMU_FLAGS}
             -kernel ${CMAKE_BINARY_DIR}/arvos
+            -nographic
+#            -serial mon:stdio
             -monitor telnet:127.0.0.1:1234,server,nowait
+#            -monitor unix:/tmp/qemu-monitor,server,nowait
             -bios none
         COMMENT "Running arvos kernel...")
 

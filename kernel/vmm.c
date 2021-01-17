@@ -84,7 +84,9 @@ void vmm_enable_paging() {
     printf("satp: 0x%x (ppn: 0x%x asid: %x mode: %x) -> 0x%x\n", satp.raw, satp.ppn, satp.asid, satp.mode, satp.ppn << 12);
     vmm_info();
     w_satp(satp.raw);
-    sfence_vma();
+    printf("##### \n");
+//    sfence_vma();
+    printf("####!!!!# %x\n", r_satp());
 }
 
 static void vmm_print_page_table(pt_t * pt, char* description) {

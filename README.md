@@ -3,7 +3,15 @@ a RISC-V kernel to support RV32I arch. A new attempt on RISC-V based on my past 
 
 ## Install 
 
+- install tools
+
+```shell
+brew install cmake qemu
 ```
+
+- install toolchains or build our own (see below `Dev` section)
+
+```shell
 brew tap riscv/riscv
 brew install riscv-gnu-toolchain --with-multilib
 ```

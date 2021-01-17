@@ -1,7 +1,7 @@
 #ifndef ARVOS_ASSERT_H
 #define ARVOS_ASSERT_H
 
-#include <stdio.h>
+#include "stdio.h"
 
 #ifdef NDEBUG
 
