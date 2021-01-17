@@ -387,7 +387,7 @@ typedef union {
         uint8_t tsr     : 1;
         uint8_t wpri4   : 8;
         uint8_t sd      : 1;
-    };
+    } __attribute__((packed));
 } mstatus_t;
 
 
@@ -455,18 +455,7 @@ static inline assert_structures() {
     assert_type(pa_t, 8);
 }
 
-static inline uint32_t make_satp(satp_t satp) {
-    return satp.ppn << 22 | satp.asid << 1 | satp.mode;
-}
-
-static inline uint32_t make_va(va_t va) {
-    return va.offset << 20 | va.vpn0 < 10 | va.vpn1;
-}
-
-static inline uint64_t make_pa(pa_t pa) {
-    return pa.offset << 44 | pa.ppn << 20 | pa._;
-}
-
-
+#define LAST(k,n) ((k) & ((1<<(n))-1))
+#define MASK(k,m,n) LAST((k)>>(m),((n)-(m)))
 
 #endif //ARVOS_RISCV_H

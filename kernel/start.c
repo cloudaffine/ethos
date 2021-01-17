@@ -6,14 +6,16 @@ void main();
 
 // Run in machine mode
 void start() {
+    console_init();
     // set M Previous Privilege mode to Supervisor, for mret.
-    mstatus_t mstatus = { .raw = r_mstatus()};
-    mstatus.mpp = 0x1;
-    w_mstatus(mstatus.raw);
-//    unsigned long x = r_mstatus();
-//    x &= ~MSTATUS_MPP_MASK;
-//    x |= MSTATUS_MPP_S;
-//    w_mstatus(x);
+//    mstatus_t mstatus = { .raw = r_mstatus()};
+//    mstatus.mpp = 0x1;
+//    w_mstatus(mstatus.raw);
+    unsigned long x = r_mstatus();
+    x &= ~MSTATUS_MPP_MASK;
+    x |= MSTATUS_MPP_S;
+    w_mstatus(x);
+    printf("%x \n", x);
 
     // set M Exception Program Counter to main, for mret.
     // requires gcc -mcmodel=medany
@@ -34,7 +36,7 @@ void start() {
     int id = r_mhartid();
     w_tp(id);
 
-    console_init();
+
     // switch to supervisor mode and jump to main().
     printf("ready to switch to supervisor mode\n");
     asm volatile("mret");
