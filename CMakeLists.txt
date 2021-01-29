@@ -62,23 +62,23 @@ add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
 
 
 # run kernel in QEMU
-if(CMAKE_BUILD_TYPE MATCHES Debug)
-    set(QEMU_FLAGS "-s;-S")
-endif()
-add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
-        POST_BUILD
-        COMMAND qemu-system-riscv32
-            -machine virt
-            -m 2G
-            -no-reboot
-            -no-shutdown ${QEMU_FLAGS}
-            -kernel ${CMAKE_BINARY_DIR}/arvos
-            -nographic
-#            -serial mon:stdio
-            -monitor telnet:127.0.0.1:4321,server,nowait
-#            -monitor unix:/tmp/qemu-monitor,server,nowait
-            -bios none
-        COMMENT "Running arvos kernel...")
+#if(CMAKE_BUILD_TYPE MATCHES Debug)
+#    set(QEMU_FLAGS "-gdb tcp::1234 -S")
+#endif()
+#add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
+#        POST_BUILD
+#        COMMAND qemu-system-riscv32
+#            -machine virt
+#            -m 2G
+#            -no-reboot
+#            -no-shutdown ${QEMU_FLAGS}
+#            -bios none
+#            -kernel ${CMAKE_BINARY_DIR}/arvos
+#            -nographic
+#            -monitor telnet:127.0.0.1:4321,server,nowait
+#            #-serial mon:stdio
+#
+#        COMMENT "Running arvos kernel...")
 
 
 
