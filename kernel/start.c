@@ -15,19 +15,12 @@ void start() {
     x &= ~MSTATUS_MPP_MASK;
     x |= MSTATUS_MPP_S;
     w_mstatus(x);
-    printf("%x \n", x);
+    printf("write %x to mstatus \n", x);
 
-    // set M Exception Program Counter to main, for mret.
-    // requires gcc -mcmodel=medany
-    w_mepc((uint32_t)main);
-
-    // disable paging for now.
-    w_satp(0);
-
-    // delegate all interrupts and exceptions to supervisor mode.
+    // delegate all exceptions to supervisor mode.
     w_medeleg(0xffff);
+    // delegate all interrupts to supervisor mode.
     w_mideleg(0xffff);
-    w_sie(r_sie() | SIE_SEIE | SIE_STIE | SIE_SSIE);
 
     // ask for clock interrupts.
 //    timerinit();
@@ -37,8 +30,19 @@ void start() {
     w_tp(id);
 
 
+    printf("current mstatus, sstatus: %x %x \n", r_mstatus(), r_sstatus());
     // switch to supervisor mode and jump to main().
     printf("ready to switch to supervisor mode\n");
+
+
+    // --------- init supervisor registers in advance --------
+    // enable supervisor mode exception/interruptions
+    w_sie(r_sie() | SIE_SEIE | SIE_STIE | SIE_SSIE);
+    // disable supervisor mode paging for now.
+    w_satp(0);
+
+    // set M Exception Program Counter to main, for mret.
+    w_mepc((uint32_t)main);
     asm volatile("mret");
 }
 

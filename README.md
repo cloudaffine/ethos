@@ -3,17 +3,13 @@ a RISC-V kernel to support RV32I arch. A new attempt on RISC-V based on my past 
 
 ## Install 
 
-- install tools
+### xPack toolchain (recommended)
 
 ```shell
-brew install cmake qemu
-```
-
-- install toolchains or build our own (see below `Dev` section)
-
-```shell
-brew tap riscv/riscv
-brew install riscv-gnu-toolchain --with-multilib
+brew install cmake ninja
+npm install --global xpm@latest
+xpm install --global @xpack-dev-tools/riscv-none-embed-gcc@latest --verbose
+brew install qemu
 ```
 
 
@@ -38,18 +34,46 @@ H – Standard Extension for Hypervisor
 
 ## Dev
 
-### Build riscv32 toolchain
-
-If you don't want to get pre-compiled binaries from Homebrew, you can build the RISC-V toolchain yourself.
-
-```
-git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
-./configure --prefix=/usr/local/opt/riscv32 --with-arch=rv32gc --with-abi=ilp32d
-make
-```
-
 ## How to run
 
 Run `./startup.sh`
 
 If you need to switch to QEMU monitor, type `Ctl + A`, then `C`. We are using [-serial mon:stdio](https://kashyapc.wordpress.com/2016/02/11/qemu-command-line-behavior-of-serial-stdio-vs-serial-monstdio/) option.
+
+## Debug
+
+CMakeLists.txt configured gdb for Debug build and stop on startup. In Clion, configure a remote GDB can connect to localhost:1234
+
+![](https://i.imgur.com/nA5GxKS.gif)
+
+## Others
+
+Alternative options for toolchains  (NOT recommended)
+
+### Official Toolchain
+
+```shell
+brew tap riscv/riscv
+brew install riscv-gnu-toolchain --with-multilib
+```
+
+### Build riscv32 toolchains
+
+If you don't want to get pre-compiled binaries from Homebrew, you can build the RISC-V toolchain yourself.
+
+```
+brew install cmake ninja
+git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
+./configure --prefix=/usr/local/opt/riscv32 --with-arch=rv32gc --with-abi=ilp32d
+make
+```
+
+### Build QEMU
+
+```
+wget https://download.qemu.org/qemu-5.2.0.tar.xz
+tar xvJf qemu-5.2.0.tar.xz
+cd qemu-5.2.0
+./configure --target-list=riscv32-softmmu && make
+make install
+```

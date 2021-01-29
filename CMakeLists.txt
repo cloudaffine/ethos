@@ -16,28 +16,29 @@ set(LINKER_FLAGS "")
 ##################### CROSS COMPILING TOOL CHAIN ############################
 set(_CMAKE_TOOLCHAIN_PREFIX "riscv32-unknown-elf")
 
-set(RISCV "/usr/local/opt/riscv32/bin/")
+#set(RISCV "/usr/local/opt/riscv32/bin/riscv32-unknown-elf")
+set(RISCV "/Users/chao.yang/Library/xPacks/@xpack-dev-tools/riscv-none-embed-gcc/10.1.0-1.1.1/.content/bin/riscv-none-embed")
 
 # BINUTILS
-set(CMAKE_AR "${RISCV}riscv32-unknown-elf-ar")
-set(CMAKE_RANLIB  "${RISCV}riscv32-unknown-elf-ranlib")
+set(CMAKE_AR "${RISCV}-ar")
+set(CMAKE_RANLIB  "${RISCV}-ranlib")
 
 # ASM
 enable_language(ASM)
-set(CMAKE_ASM_COMPILER "${RISCV}riscv32-unknown-elf-as")
+set(CMAKE_ASM_COMPILER "${RISCV}-as")
 set(CMAKE_ASM_OBJECT_FORMAT "elf")
 set(CMAKE_ASM_COMPILE_OBJECT "${CMAKE_ASM_COMPILER} ${CMAKE_ASM_FLAGS} ${ASM_FLAGS} -o <OBJECT> <SOURCE>")
 
 # C COMPILER
 enable_language(C)
-set(CMAKE_C_COMPILER "${RISCV}riscv32-unknown-elf-gcc")
+set(CMAKE_C_COMPILER "${RISCV}-gcc")
 set(CMAKE_C_SYSROOT_FLAG "")
 set(CMAKE_C_FLAGS "${C_FLAGS}")
 set(CMAKE_C_LINK_FLAGS "")
-set(CMAKE_CXX_COMPILER "${RISCV}riscv32-unknown-elf-g++")
+set(CMAKE_CXX_COMPILER "${RISCV}-g++")
 
 # LINKER
-set(CMAKE_LINKER ${RISCV}riscv32-unknown-elf-ld)
+set(CMAKE_LINKER ${RISCV}-ld)
 set(CMAKE_EXE_LINKER_FLAGS "-Wl,-T${CMAKE_SOURCE_DIR}/kernel/layout.ld")
 
 file(GLOB_RECURSE LIBC_SRCS "libc/*.c" "libc/*.h")
@@ -56,13 +57,13 @@ target_link_libraries(${CMAKE_PROJECT_NAME} c)
 
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
-        COMMAND riscv32-unknown-elf-objdump -d -D arvos > arvos.elfdump && hexdump arvos > arvos.hexdump
+        COMMAND ${RISCV}-objdump -d -D arvos > arvos.objdump && hexdump arvos > arvos.hexdump
         COMMENT "COPY kernel to another file")
 
 
 # run kernel in QEMU
 if(CMAKE_BUILD_TYPE MATCHES Debug)
-#    set(QEMU_FLAGS "-s;-S")
+    set(QEMU_FLAGS "-s;-S")
 endif()
 add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
         POST_BUILD
@@ -74,7 +75,7 @@ add_custom_command (TARGET ${CMAKE_PROJECT_NAME}
             -kernel ${CMAKE_BINARY_DIR}/arvos
             -nographic
 #            -serial mon:stdio
-            -monitor telnet:127.0.0.1:1234,server,nowait
+            -monitor telnet:127.0.0.1:4321,server,nowait
 #            -monitor unix:/tmp/qemu-monitor,server,nowait
             -bios none
         COMMENT "Running arvos kernel...")
