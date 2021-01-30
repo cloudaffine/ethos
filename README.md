@@ -44,6 +44,14 @@ If you need to switch to QEMU monitor, type `Ctl + A`, then `C`. We are using [-
 
 CMakeLists.txt configured gdb for Debug build and stop on startup. In Clion, configure a remote GDB can connect to localhost:1234
 
+- Embedded GDB Server with QEMU (recommended)
+
+![](https://i.imgur.com/DG5vqpx.gif)
+  
+- GDB Remote Debug
+
+In this approach, you need to start QEMU before start a debug session
+  
 ![](https://i.imgur.com/nA5GxKS.gif)
 
 ## Others
@@ -77,3 +85,11 @@ cd qemu-5.2.0
 ./configure --target-list=riscv32-softmmu && make
 make install
 ```
+
+# Roadmap
+
+- [ ] basic virtual memory management
+- [ ] process scheduling
+- [ ] system calls  
+- [ ] simplified shell
+- [ ] kernel network stack supporting networking experiments
