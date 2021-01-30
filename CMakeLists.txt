@@ -11,13 +11,14 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 set(ASM_FLAGS "-march=rv32imac -mabi=ilp32")
 set(C_FLAGS "-march=rv32imafdc -mabi=ilp32 -mcmodel=medany -std=gnu99 -ffreestanding -nostdlib -nostdinc -nostartfiles -fno-aggressive-loop-optimizations -fno-zero-initialized-in-bss -O0 -Wall -Wextra")
 set(CMAKE_C_FLAGS_DEBUG "-ggdb")
+set(CMAKE_C_FLAGS_RELEASE "-O0")
 set(LINKER_FLAGS "")
 
 ##################### CROSS COMPILING TOOL CHAIN ############################
-set(_CMAKE_TOOLCHAIN_PREFIX "riscv32-unknown-elf")
+set(_CMAKE_TOOLCHAIN_PREFIX "/Users/chao.yang/Library/xPacks/@xpack-dev-tools/riscv-none-embed-gcc/10.1.0-1.1.1/.content/bin")
 
 #set(RISCV "/usr/local/opt/riscv32/bin/riscv32-unknown-elf")
-set(RISCV "/Users/chao.yang/Library/xPacks/@xpack-dev-tools/riscv-none-embed-gcc/10.1.0-1.1.1/.content/bin/riscv-none-embed")
+set(RISCV "${_CMAKE_TOOLCHAIN_PREFIX}/riscv-none-embed")
 
 # BINUTILS
 set(CMAKE_AR "${RISCV}-ar")

@@ -36,7 +36,7 @@ H – Standard Extension for Hypervisor
 
 ## How to run
 
-Run `./startup.sh`
+Run `./dev.sh`
 
 If you need to switch to QEMU monitor, type `Ctl + A`, then `C`. We are using [-serial mon:stdio](https://kashyapc.wordpress.com/2016/02/11/qemu-command-line-behavior-of-serial-stdio-vs-serial-monstdio/) option.
 
