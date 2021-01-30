@@ -202,7 +202,6 @@ static inline void
 w_satp(u_xlen_t x)
 {
     asm volatile("csrw satp, %0" : : "r" (x));
-    asm volatile("sfence.vma zero, zero");
 }
 
 static inline u_xlen_t

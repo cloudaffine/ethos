@@ -4,6 +4,7 @@
 #include "riscv.h"
 #include "layout.h"
 #include "vmm.h"
+#include "console.h"
 
 pagetable_t kernel_pagetable __attribute__((aligned(PAGE_SIZE)));
 
@@ -21,15 +22,20 @@ void vmm_init_kernel_pagetable(pagetable_t *pagetable) {
     // point each entry in root page table to secondary page tables accordingly
     // so root page table is valid and initialized
     for(uint32_t i = 0; i < PAGE_TABLE_SIZE; ++i) {
-        pte_t pte;
-        pte.v = 0x1; // valid
-        pte.r = 0x1; // read
-        pte.w = 0x1; // write
-        pte.x = 0x0; // disable execute
-        pte.u = 0x0; // kernel page
-        pte.a = 0x0; // not access
-        pte.d = 0x0; // not dirty
-        pte.ppn = PPN(&(pagetable->secondary[i]));
+        pte_t pte = {
+            .v = 0x1, // valid
+            // read/write/execute all zeros means pointer to the next level of page table
+            .r = 0x0,
+            .w = 0x0,
+            .x = 0x0,
+            .u = 0x0, // user mode access
+            .g = 0x0,
+            .a = 0x0, // not access
+            .d = 0x0, // not dirty
+            .rsw = 0x0,
+            .ppn = PPN(&(pagetable->secondary[i]))
+        };
+
         pagetable->root[i] = pte;
 
         assert(pagetable->root[i].ppn * PAGE_SIZE == (uint32_t)&(pagetable->secondary[i]));
@@ -37,16 +43,18 @@ void vmm_init_kernel_pagetable(pagetable_t *pagetable) {
 }
 
 void vmm_install_pte(pagetable_t *pagetable, uint32_t pt_index, uint32_t pte_index, uint32_t ppn) {
-    pte_t pte;
-    pte.v = 0x1; // valid
-    pte.r = 0x1; // read
-    pte.w = 0x1; // write
-    pte.x = 0x1; // execute
-    pte.u = 0x1; // kernel page
-//    pte.g = 0x0;
-//    pte.a = 0x0; // not accessed
-//    pte.d = 0x0; // not dirty
-    pte.ppn = ppn;
+    pte_t pte = {
+        .v = 0x1, // valid
+        .r = 0x1,
+        .w = 0x1,
+        .x = 0x1,
+        .u = 0x0, // user mode access
+        .g = 0x0,
+        .a = 0x0, // not access
+        .d = 0x0, // not dirty
+        .rsw = 0x0,
+        .ppn = ppn
+    };
     (pagetable->secondary)[pt_index][pte_index] = pte;
 }
 
@@ -82,7 +90,9 @@ void vmm_disable_paging() {
     w_satp(0x0);
 }
 
-
+void exception_handler() {
+    printf("exception \n");
+}
 
 void vmm_enable_paging() {
     assert_structures();
@@ -101,13 +111,14 @@ void vmm_enable_paging() {
     satp.mode = 0x1;
     vmm_info();
 
-    printf("---------------\n");
     printf("satp: 0x%x (ppn: 0x%x asid: %x mode: %x) -> 0x%x\n", satp.raw, satp.ppn, satp.asid, satp.mode, satp.ppn << 12);
-    printf("%x \n", va_to_pa(0x800002ec));
+    w_stvec((uint32_t)exception_handler << 2);
     w_satp(satp.raw);
-//    sfence_vma();
-    printf("stap %x\n", r_satp());
+    sfence_vma();
+    printf("---------------\n");
 }
+
+
 
 static void vmm_print_page_table(pt_t * pt, char* description) {
     printf("0x%x: %s \n", (uint32_t)pt, description);

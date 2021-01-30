@@ -10,6 +10,6 @@ void main() {
     printf("%s %s", banner, version);
     printf("kernel: 0x%x ~ 0x%x .. 0x%x \n", KERN_START, KERN_STOP, KERN_END);
     vmm_enable_paging();
-    printf("enabled paging\n");
-    vmm_info();
+    printf("✨ enabled paging\n");
+//    vmm_info();
 }
